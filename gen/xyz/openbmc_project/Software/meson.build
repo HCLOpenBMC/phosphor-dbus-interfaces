@@ -134,17 +134,17 @@ generated_others += custom_target(
     build_by_default: true,
 )
 
-subdir('HostToBeUpdated')
+subdir('FirmwareUpdate')
 generated_others += custom_target(
-    'xyz/openbmc_project/Software/HostToBeUpdated__markdown'.underscorify(),
-    input: [ meson.source_root() / 'xyz/openbmc_project/Software/HostToBeUpdated.interface.yaml',  ],
-    output: [ 'HostToBeUpdated.md' ],
+    'xyz/openbmc_project/Software/FirmwareUpdate__markdown'.underscorify(),
+    input: [ meson.source_root() / 'xyz/openbmc_project/Software/FirmwareUpdate.interface.yaml',  ],
+    output: [ 'FirmwareUpdate.md' ],
     command: [
         sdbuspp_gen_meson_prog, '--command', 'markdown',
         '--output', meson.current_build_dir(),
         '--tool', sdbusplusplus_prog,
         '--directory', meson.source_root(),
-        'xyz/openbmc_project/Software/HostToBeUpdated',
+        'xyz/openbmc_project/Software/FirmwareUpdate',
     ],
     build_by_default: true,
 )

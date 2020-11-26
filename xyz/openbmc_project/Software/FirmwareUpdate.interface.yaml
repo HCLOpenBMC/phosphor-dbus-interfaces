@@ -6,7 +6,7 @@ description: >
     If looking for real software versions associated with a device then ensure
     this interface is under the /xyz/openbmc_project/software object path.
 properties:
-    - name: HostToBeUpdated
+    - name: FirmwareUpdate
       type: boolean
       default: false
       description: >
